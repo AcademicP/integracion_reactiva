@@ -13,6 +13,7 @@ const data = [
 
 app.get("/api/people/:dni", (req, res)=>{
     console.log("REQUEST", new Date());
+    setTimeout(()=>{ console.log("xxxxxx"); },5000);
     let processData = [];
     const observable = from(data);
     observable.pipe(
